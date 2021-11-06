@@ -24,9 +24,9 @@ public class App {
                         + all_grades.stream()
                                 .filter(x -> x >= Integer.parseInt(i.getValue().split(",")[0])
                                         && x <= Integer.parseInt(i.getValue().split(",")[1]))
-                                .collect(Collectors.toList()).size()
+                                .count()
                         + " Students"));
-        System.out.println(all_grades.stream().filter(x -> x == 100).collect(Collectors.toList()).size()
+        System.out.println(all_grades.stream().filter(x -> x == 100).count()
                 + " Students got a perfect 100");
     }
 }
